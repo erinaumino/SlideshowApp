@@ -16,6 +16,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
 
+    @IBAction func next(_ sender: Any) {
+    }
+    
     @IBAction func go(_ sender: Any){
         if self.i < 7{
             self.i += 1
@@ -69,10 +72,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.viewTap(sender:)))
-
-        self.imageView.addGestureRecognizer(tap)
 
     }
 
@@ -82,10 +81,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
-    }
-    
-    func viewTap(sender:UITapGestureRecognizer){
-        self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

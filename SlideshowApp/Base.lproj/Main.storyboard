@@ -49,17 +49,24 @@
                                     <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1S8-s6-ec5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzD-sv-LU3">
+                                <rect key="frame" x="67" y="210" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psb-uA-mrB"/>
+                                    <segue destination="B9w-Is-wuz" kind="show" identifier="toSecondViewController" id="SkM-lI-FdZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="XQH-iu-YIW" id="q7z-6I-8MA"/>
-                        <segue destination="B9w-Is-wuz" kind="show" identifier="toSecondViewController" id="nIw-MA-Ax1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95" y="54"/>
+            <point key="canvasLocation" x="-95.200000000000003" y="53.523238380809602"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="yEM-NY-tl5">
