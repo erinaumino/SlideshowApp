@@ -14,11 +14,14 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     var tapCount:Int = 0
     var timer: Timer? = nil
     
+    @IBOutlet weak var showw: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var goo: UIButton!
     @IBOutlet weak var backk: UIButton!
 
     @IBAction func next(_ sender: Any) {
+        timer?.invalidate()
+        timer = nil
     }
     
     @IBAction func go(_ sender: Any){
@@ -53,11 +56,14 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
             goo.isEnabled = false
             backk.isEnabled = false
+            showw.setTitle("停止", for: UIControlState.normal)
         } else {
             timer?.invalidate()
             timer = nil
             goo.isEnabled = true
             backk.isEnabled = true
+            showw.setTitle("再生", for: UIControlState.normal)
+        
         }
        
     }
@@ -87,6 +93,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
+                    timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

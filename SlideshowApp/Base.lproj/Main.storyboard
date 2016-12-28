@@ -31,22 +31,22 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVu-yD-M6G">
-                                <rect key="frame" x="72" y="69" width="31" height="30"/>
+                                <rect key="frame" x="112" y="169" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVs-po-rdv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNY-0j-nI4">
-                                <rect key="frame" x="172" y="69" width="31" height="30"/>
+                                <rect key="frame" x="172" y="169" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xav-RA-8vC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-RD-9nt">
-                                <rect key="frame" x="254" y="69" width="67" height="30"/>
-                                <state key="normal" title="再生/停止"/>
+                                <rect key="frame" x="232" y="169" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1S8-s6-ec5"/>
                                 </connections>
@@ -65,22 +65,23 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ixP-RD-9nt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="2oi-KN-SwI"/>
+                            <constraint firstItem="DVu-yD-M6G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="50Z-Do-Rfg"/>
+                            <constraint firstItem="ixP-RD-9nt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="6B7-zu-isX"/>
                             <constraint firstItem="XQH-iu-YIW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1y-Z5-hQ7"/>
-                            <constraint firstItem="XNY-0j-nI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TQF-mk-7nB"/>
+                            <constraint firstItem="DVu-yD-M6G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="PP2-Qm-9HD"/>
+                            <constraint firstItem="XNY-0j-nI4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="Qa8-0S-ufc"/>
                             <constraint firstItem="XQH-iu-YIW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VRd-dM-gHn"/>
-                            <constraint firstItem="DVu-yD-M6G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="Z5F-cq-N3Q"/>
                             <constraint firstItem="tzD-sv-LU3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dfc-xl-MQq"/>
-                            <constraint firstItem="ixP-RD-9nt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="fh1-LA-G4m"/>
-                            <constraint firstItem="XNY-0j-nI4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="j9N-8y-ed5"/>
+                            <constraint firstItem="XNY-0j-nI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fas-HM-tIg"/>
                             <constraint firstItem="tzD-sv-LU3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rTw-Xp-5PI"/>
-                            <constraint firstItem="DVu-yD-M6G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="yZc-JL-9Nb"/>
+                            <constraint firstItem="ixP-RD-9nt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="tbE-f3-JRt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backk" destination="XNY-0j-nI4" id="biG-xo-rIj"/>
                         <outlet property="goo" destination="DVu-yD-M6G" id="Mg5-e0-loC"/>
                         <outlet property="imageView" destination="XQH-iu-YIW" id="q7z-6I-8MA"/>
+                        <outlet property="showw" destination="ixP-RD-9nt" id="ygh-Nt-bAS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWO-eS-oOB">
-                                <rect key="frame" x="172" y="69" width="31" height="30"/>
+                                <rect key="frame" x="172" y="169" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="5WU-ch-cjc" kind="unwind" unwindAction="unwindWithSegue:" id="okn-d9-4lE"/>
@@ -117,9 +118,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RcB-bd-jD5" firstAttribute="centerY" secondItem="J4G-xG-Ft6" secondAttribute="centerY" id="BKo-Og-exz"/>
-                            <constraint firstItem="nWO-eS-oOB" firstAttribute="centerY" secondItem="J4G-xG-Ft6" secondAttribute="centerY" constant="-250" id="Rpy-7r-umq"/>
-                            <constraint firstItem="nWO-eS-oOB" firstAttribute="centerX" secondItem="J4G-xG-Ft6" secondAttribute="centerX" id="goU-5s-vdd"/>
+                            <constraint firstItem="nWO-eS-oOB" firstAttribute="centerX" secondItem="J4G-xG-Ft6" secondAttribute="centerX" id="WXI-a5-Rkr"/>
                             <constraint firstItem="RcB-bd-jD5" firstAttribute="centerX" secondItem="J4G-xG-Ft6" secondAttribute="centerX" id="k9q-tr-Ik7"/>
+                            <constraint firstItem="nWO-eS-oOB" firstAttribute="centerY" secondItem="J4G-xG-Ft6" secondAttribute="centerY" constant="-150" id="oB1-bC-O11"/>
                         </constraints>
                     </view>
                     <connections>
