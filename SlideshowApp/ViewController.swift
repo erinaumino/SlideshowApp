@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController,UIGestureRecognizerDelegate {
     
     var i:Int = 1
-    var tapCount:Int = 0
     var timer: Timer? = nil
     
     @IBOutlet weak var showw: UIButton!
@@ -50,9 +49,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     @IBAction func show(_ sender: Any) {
-        tapCount += 1
         
-        if tapCount%2 == 1 {
+        if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
             goo.isEnabled = false
             backk.isEnabled = false
@@ -93,7 +91,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
-                    timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
