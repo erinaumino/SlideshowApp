@@ -15,6 +15,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     var timer: Timer? = nil
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var goo: UIButton!
+    @IBOutlet weak var backk: UIButton!
 
     @IBAction func next(_ sender: Any) {
     }
@@ -49,9 +51,13 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         
         if tapCount%2 == 1 {
             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
+            goo.isEnabled = false
+            backk.isEnabled = false
         } else {
             timer?.invalidate()
             timer = nil
+            goo.isEnabled = true
+            backk.isEnabled = true
         }
        
     }
